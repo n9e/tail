@@ -8,7 +8,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/hpcloud/tail/util"
+	"github.com/n9e/tail/util"
 	"gopkg.in/tomb.v1"
 )
 
@@ -114,5 +114,5 @@ func (fw *PollingFileWatcher) ChangeEvents(t *tomb.Tomb, pos int64) (*FileChange
 }
 
 func init() {
-	POLL_DURATION = 250 * time.Millisecond
+	POLL_DURATION = 2 * time.Millisecond
 }
